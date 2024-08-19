@@ -7,8 +7,8 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #c0392b;
-    color: #fff;
+    background: #ef3b24; /* Arka plan rengi güncellendi */
+    color: #000; /* Genel yazı rengi siyah yapıldı */
     overflow: hidden;
     position: relative;
     background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
@@ -32,7 +32,7 @@ body, html {
     width: 90%;
     max-width: 550px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-    color: #c0392b;
+    color: #000; /* İçerik yazı rengi siyah yapıldı */
     z-index: 1;
 }
 
@@ -56,7 +56,7 @@ body, html {
 }
 
 .contact-list li a {
-    color: #c0392b;
+    color: #000; /* Bağlantı rengi siyah yapıldı */
     text-decoration: none;
     transition: color 0.3s ease;
     display: flex;
@@ -64,7 +64,7 @@ body, html {
 }
 
 .contact-list li a:hover {
-    color: #e74c3c;
+    color: #555; /* Hover sırasında daha koyu siyah */
 }
 
 .contact-list .icon {
