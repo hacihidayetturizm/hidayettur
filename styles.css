@@ -1,0 +1,167 @@
+/* Yüklenme Animasyonu */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loader .dot {
+    width: 20px;
+    height: 20px;
+    background-color: #c0392b;
+    border-radius: 50%;
+    animation: bounce 2s infinite alternate;
+}
+
+.loader .line {
+    width: 40px;
+    height: 2px;
+    background-color: #c0392b;
+    margin-top: 10px;
+    animation: stretch 2s infinite alternate;
+}
+
+.loader .counter {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #c0392b;
+    font-weight: bold;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+@keyframes stretch {
+    0% { transform: scaleX(1); }
+    100% { transform: scaleX(1.5); }
+}
+
+/* Genel Stil */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(120deg, #c0392b, #f7e7d4);
+}
+
+/* Link Renkleri */
+a {
+    color: #c0392b; /* İlk hali kırmızı */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+}
+
+a:visited {
+    color: #e74c3c; /* Tıklandıktan sonra daha açık kırmızı */
+}
+
+a:hover {
+    color: #8e0e00; /* Üzerine gelindiğinde koyu kırmızı */
+}
+
+a:active {
+    color: #c0392b; /* Tıklama sırasında koyu kırmızı kalır */
+}
+
+/* Logo ve İçerik */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+    width: 100%;
+    opacity: 0;
+    animation: fadeInMove 2s ease-in-out forwards;
+}
+
+.logo {
+    width: 220px; /* Logonun boyutunu artırdık */
+    margin-bottom: 20px;
+    animation: fadeInMove 2.5s ease-in-out forwards;
+}
+
+h1 {
+    font-size: 1.8rem;
+    color: #c0392b;
+    margin-bottom: 20px;
+    animation: fadeInMove 3s ease-in-out forwards;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    animation: fadeInMove 3.5s ease-in-out forwards;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-list li i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: #c0392b;
+}
+
+.contact-list li span {
+    flex-grow: 1;
+    text-align: left;
+}
+
+contact-list li:hover {
+    transform: scale(1.05);
+    color: #c0392b;
+}
+
+/* Giriş Animasyonu */
+@keyframes fadeInMove {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .logo {
+        width: 140px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .contact-list li {
+        font-size: 1rem;
+    }
+
+    .contact-list li i {
+        font-size: 1.2rem;
+    }
+}
