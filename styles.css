@@ -25,7 +25,7 @@ body, html {
 }
 
 .content {
-    text-align: center;
+    text-align: left; /* İçeriği sola hizalamak için bu satırı değiştirdik */
     background-color: #fff;
     border-radius: 20px;
     padding: 60px 40px;
@@ -40,6 +40,7 @@ body, html {
     width: 220px;
     margin: 0 auto 40px auto;
     display: block;
+    text-align: center;
 }
 
 .contact-list {
@@ -52,7 +53,6 @@ body, html {
     font-size: 1.6rem;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .contact-list li a {
